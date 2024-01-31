@@ -1,0 +1,16 @@
+<div class="container fulid mt-5 pt-5">
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <img [src]="laptop.imageUrl" [alt]="laptop.imageUrl" width="200px"/>
+        </div>
+   <div class="col-4">
+    <h3>{{laptop.laptopName}}</h3>
+    
+    <p>{{laptop.laptopPrice|currency:"INR"}}</p>
+    <p>{{laptop.laptopVersion}}</p>
+    <button (click)="addToCart(laptop)" class="btn btn-primary">addToCart</button>
+    
+   </div>
+    </div>
+</div>
+

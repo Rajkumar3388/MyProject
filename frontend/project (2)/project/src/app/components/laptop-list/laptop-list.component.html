@@ -1,0 +1,19 @@
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div *ngFor="let laptop of laptops" class="col-4">
+      <div class="card mb-3">
+        <img [src]="laptop.imageUrl" class="card-img-top" alt="{{ laptop.laptopName }} Image" style="width: 150px;">
+        <div class="card-body">
+          <h5 class="card-title">{{ laptop.laptopName }}</h5>
+          <p class="card-text">{{ laptop.laptopPrice | currency : 'INR' }}</p>
+          <p class="card-text">{{laptop.laptopModel}}</p>
+          <p class="card-text">{{laptop.laptopVersion}} </p>
+          <p class="card-text">{{laptop.laptopColor}} </p>
+        
+          <button (click)="addToCart(laptop)" class="btn btn-primary">addToCart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="laptops.length === 0" class="alert alert-warning">No products found</div>
+</div>
